@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import React from 'react';
+import propTypes from 'prop-types';
 import './App.css';
 import Profile from './Profile/Profile';
 import kmg from './asset/kmg.webp';
@@ -26,6 +27,18 @@ const App=() => {
            
     </div>
   );
+}
+App.defaultProps={
+  fullName:'name',
+  bio:'biodata',
+  profession:'programmer'
+
+}
+App.propTypes={
+  fullName:propTypes.string,
+  bio:propTypes.string,
+  profession:propTypes.string,
+  handleName:propTypes.func
 }
 
 export default App;
